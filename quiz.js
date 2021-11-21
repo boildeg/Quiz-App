@@ -5,7 +5,6 @@ const qImg = document.getElementById("qImg");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
-const choiceD = document.getElementById("D");
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
@@ -15,31 +14,28 @@ const scoreDiv = document.getElementById("scoreContainer");
 //create questions
 let questions = [
       {
-            question: "Which of the following is not a real eCommerce platform?",
+            question: "Wich is the selector in this CSS" + "<br /> " + "p{color:red}",
             imgSrc: "./img/css.png",
-            choiceA: "wrong",
-            choiceB: "wrong",
-            choiceC: "correct",
-            choiceD: "worng",
+            choiceA: "p",
+            choiceB: "color",
+            choiceC: "red",
+            correct: "A"
+      },
+      {
+            question: "Which of the following is the correct way to add an attribute?",
+            imgSrc: "./img/html.png",
+            choiceA: "scr",
+            choiceB: "class:ids",
+            choiceC: 'id="title"',
             correct: "C"
       },
       {
-            question: "If Shopify is so good, why are Shopify developers necessary?",
-            imgSrc: "./img/html.png",
-            choiceA: "wrong",
-            choiceB: "wrong",
-            choiceC: "wrong",
-            choiceD: "correct",
-            correct: "D"
-      },
-      {
-            question: "Which of the following is true about Shopify developers?",
+            question: "What surrounds an if/else statement?",
             imgSrc: "./img/js.png",
-            choiceA: "wrong",
-            choiceB: "wrong",
-            choiceC: "wrong",
-            choiceD: "correct",
-            correct: "D"
+            choiceA: "Quotations",
+            choiceB: "Square Brackets",
+            choiceC: "Curly Brackets",
+            correct: "C"
       }
 ]
 
@@ -63,7 +59,7 @@ function renderQuestion() {
       choiceA.innerHTML = "<p>" + q.choiceA + "</p>";
       choiceB.innerHTML = "<p>" + q.choiceB + "</p>";
       choiceC.innerHTML = "<p>" + q.choiceC + "</p>";
-      choiceD.innerHTML = "<p>" + q.choiceD + "</p>";
+
 }
 
 start.addEventListener("click", startQuiz);
